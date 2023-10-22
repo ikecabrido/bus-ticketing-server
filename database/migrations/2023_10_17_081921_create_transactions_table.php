@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->date('transaction_date');
-            $table->decimal('total');
             $table->timestamps();
         });
     }

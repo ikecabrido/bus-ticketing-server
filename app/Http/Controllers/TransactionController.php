@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illluminate\Support\Facades\Route;
+use App\Models\Transaction;
 
 class TransactionController extends Controller
 {
@@ -11,7 +13,7 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        //
+        return Transaction::all();
     }
 
     /**

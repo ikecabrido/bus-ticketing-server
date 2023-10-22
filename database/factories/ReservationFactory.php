@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
 use App\Models\Bus;
 use App\Models\Transaction;
+use App\Models\Reservation;
 
 
 /**
@@ -37,7 +38,7 @@ class ReservationFactory extends Factory
             'reservation_date' => fake()->dateTimeThisYear(),
             'departure_time' => fake()->time(),
             'price' => fake()->numberBetween(1500, 2500),
-            'departure_date' => fake()->dateTimeThisYear(),
+            'departure_date' => fake()->dateTimeThisYear(),          
         ];
     }
 }

@@ -15,7 +15,7 @@ class Transaction extends Model
     protected $fillable = [
         'user_id',
         'transaction_date',
-        'total'
+        'total_price'
     ];
     
     public function user():BelongsTo {

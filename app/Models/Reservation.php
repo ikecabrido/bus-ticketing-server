@@ -23,7 +23,7 @@ class Reservation extends Model
         'reservation_date',
         'departure_time',
         'price',
-        'departure_date'
+        'departure_date',     
     ];
 
     public function bus():HasOne {
