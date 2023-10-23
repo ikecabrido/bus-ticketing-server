@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illluminate\Support\Facades\Route;
+use App\Http\Resources\ReservationResource;
 use App\Models\Reservation;
 use App\Model\Bus;
 
@@ -14,7 +15,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        return Reservation::all();
+        return ReservationResource::collection(Reservation::all());
     }
 
     /**

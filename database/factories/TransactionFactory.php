@@ -19,8 +19,8 @@ class TransactionFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->randomElement(User::pluck('id')),
-            'transaction_date' => fake()->dateTimeThisYear(),
+            // 'user_id' => fake()->randomElement(User::pluck('id')),
+            // 'transaction_date' => fake()->dateTimeThisYear(),
         ];
     }
 }
