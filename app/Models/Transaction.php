@@ -13,16 +13,17 @@ class Transaction extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id',
+        'reservation_id',
+        'ticket_number',
         'transaction_date',
-        'total_price'
+        
     ];
     
     public function user():BelongsTo {
         return $this->belongsTo(User::class);
     }
 
-    public function reservation():HasMany {
-        return $this->hasMany(Reservation::class)->orderBy('created_at', 'desc');
+    public function reservation():BelongsTo {
+        return $this->BelongsTo(Reservation::class)->orderBy('created_at', 'desc');
     }
 }

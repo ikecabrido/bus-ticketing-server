@@ -17,8 +17,7 @@ class BusFactory extends Factory
     public function definition(): array
     {
         return [
-            // 'bus_number' => fake()->numberBetween(001, 100),
-            // 'bus_type' => ['Regular', 'Premium', 'P2P']
+           //
         ];
     }
 }

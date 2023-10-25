@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illluminate\Support\Facades\Route;
 use App\Http\Resources\ReservationResource;
 use App\Models\Reservation;
-use App\Model\Bus;
+use App\Models\Bus;
 
 class ReservationController extends Controller
 {
@@ -23,7 +23,17 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reservation = Reservation::create($request->all());
+
+        if ($reservation) {
+            return response([
+                'message' => 'Successfully made a reservation!'
+            ], 201);
+        }else {
+            return response([
+                'message' => 'Unsuccessful reservation!'
+            ], 500);
+        }
     }
 
     /**
@@ -31,7 +41,17 @@ class ReservationController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $reservation = Reservation::find($id);
+
+        if (!$reservation) {
+            return response([
+                'message' => 'Reservation Not Found'
+            ], 400);
+        }
+
+        return response([
+            'reservation' => $reservation 
+        ], 200);
     }
 
     /**

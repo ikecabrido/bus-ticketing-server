@@ -17,21 +17,18 @@ use App\Http\Controllers\TransactionController;
 |
 */
 
-// Auth routes
 
-Route::post('/signup', [AuthController::class, 'signup']);
-Route::post('/login', [AuthController::class, 'login']);
+
 
 //public routes
 //reservation
-// Route::get('/reservations', [ReservationController::class, 'index']);
+Route::get('/reservations', [ReservationController::class, 'index']);
+Route::post('/reservations', [ReservationController::class, 'store']);
+Route::get('/transactions', [TransactionController::class, 'index']);
+Route::get('/transactions', [TransactionController::class, 'store']);
 
 
-Route::group(['middleware' => ['auth:sanctum']], function() {
-    Route::post('/logout', [AuthController::class, 'logout']);
-    Route::get('/reservations', [ReservationController::class, 'index']);
-    Route::get('/transactions', [TransactionController::class, 'index']);
-});
+
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();

@@ -15,7 +15,7 @@ class Bus extends Model
         'bus_type'
     ];
 
-    public function reservation():BelongsTo {
-        return $this->belongsTo(Reservation::class);
+    public function reservation():HasOne {
+        return $this->hasOne(Reservation::class);
     }
 }

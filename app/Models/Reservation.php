@@ -16,25 +16,24 @@ class Reservation extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id',
         'bus_id',
-        'transaction_id',
-        'destination',
+        'destinationFrom',
+        'destinationTo',
         'reservation_date',
         'departure_time',
         'price',
         'departure_date',     
     ];
 
-    public function bus():HasOne {
-        return $this->hasOne(Bus::class);
+    public function bus():BelongsTo {
+        return $this->belongsTo(Bus::class);
     }
 
     public function user():BelongsTo {
         return $this->belongsTo(User::class);
     }
 
-    public function reservation():BelongsTo {
-        return $this->belongsTo(Reservation::class);
+    public function reservation():HasOne {
+        return $this->hasOne(Reservation::class);
     }
 }
