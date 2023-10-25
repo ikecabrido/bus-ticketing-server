@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Resources\TransactionResource;
+use App\Models\Reservation;
 use App\Models\Transaction;
 
 class TransactionController extends Controller
@@ -22,17 +23,17 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        $transaction = Transaction::create($request->all());
+        // $transaction = Transaction::create($request->all());
 
-        if ($transaction) {
-            return response([
-                'message' => 'Transaction successful!'
-            ], 201);
-        } else {
-           return response([
-            'message' => 'Transaction failed!'
-           ], 500);
-        }
+        // if ($transaction) {
+        //     return response([
+        //         'message' => 'Transaction successful!'
+        //     ], 201);
+        // } else {
+        //    return response([
+        //     'message' => 'Transaction failed!'
+        //    ], 500);
+        // }
         
     }
 
@@ -41,17 +42,17 @@ class TransactionController extends Controller
      */
     public function show(string $id)
     {
-        $transaction = Transaction::find($id);
+        // $transaction = Transaction::find($id);
 
-        if (!$transaction) {
-            return response([
-                'message' => 'Transaction does not exist'
-            ], 400);
-        };
+        // if (!$transaction) {
+        //     return response([
+        //         'message' => 'Transaction does not exist'
+        //     ], 400);
+        // };
 
-        return response([
-            'transaction' => $transaction
-        ], 200);
+        // return response([
+        //     'transaction' => $transaction
+        // ], 200);
     }
 
     /**
