@@ -12,7 +12,12 @@ class Bus extends Model
     use HasFactory;
     protected $fillable = [
         'bus_number',
-        'bus_type'
+        'bus_type',
+        'price',
+        'destinationFrom',
+        'destinationTo',
+        'departure_time',
+        'departure_date'
     ];
 
     public function reservation():HasOne {

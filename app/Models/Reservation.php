@@ -17,12 +17,8 @@ class Reservation extends Model
     use HasFactory;
     protected $fillable = [
         'bus_id',
-        'destinationFrom',
-        'destinationTo',
-        'reservation_date',
-        'departure_time',
-        'price',
-        'departure_date',     
+        'reservation_date',  
+        'quantity'  
     ];
 
     public function bus():BelongsTo {

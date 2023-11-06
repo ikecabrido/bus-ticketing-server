@@ -25,7 +25,7 @@ use App\Http\Controllers\TransactionController;
 Route::get('/reservations', [ReservationController::class, 'index']);
 Route::post('/reservations', [ReservationController::class, 'store']);
 Route::get('/transactions', [TransactionController::class, 'index']);
-Route::get('/transactions', [TransactionController::class, 'store']);
+Route::post('/transactions', [TransactionController::class, 'store']);
 
 
 

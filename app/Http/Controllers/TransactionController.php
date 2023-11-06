@@ -42,17 +42,17 @@ class TransactionController extends Controller
      */
     public function show(string $id)
     {
-        // $transaction = Transaction::find($id);
+        $transaction = Transaction::find($id);
 
-        // if (!$transaction) {
-        //     return response([
-        //         'message' => 'Transaction does not exist'
-        //     ], 400);
-        // };
+        if (!$transaction) {
+            return response([
+                'message' => 'Transaction does not exist'
+            ], 400);
+        };
 
-        // return response([
-        //     'transaction' => $transaction
-        // ], 200);
+        return response([
+            'transaction' => $transaction
+        ], 200);
     }
 
     /**

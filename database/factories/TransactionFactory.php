@@ -19,7 +19,7 @@ class TransactionFactory extends Factory
     public function definition(): array
     {
         return [
-            'reservation_id' => Reservation::pluck('id')->first(),
+            'reservation_id' =>fake()->randomElement(Reservation::pluck('id')),
             'ticket_number' => fake()->unique()->numberBetween(1000, 9999),
             'transaction_date' => now()
            

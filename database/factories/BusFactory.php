@@ -16,8 +16,25 @@ class BusFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-           //
-        ];
+        // $busTypes = ['Regular', 'Premium', 'P2P'];
+        // $prices = [600, 700, 900];
+
+        // $busNumber = 101;
+
+        // $objectLength = 24;
+
+        // for ($i = 0; $i < $objectLength; $i++) {
+        //     $busType = $busTypes[$i % count($busTypes)];
+        //     $price = $prices[$i % count($prices)];
+
+            return [
+                // 'bus_number' => $busNumber++,
+                // 'bus_type' => $busType,
+                // 'price' => $price
+            ];
+        
     }
+        
+    
+//   }
 }

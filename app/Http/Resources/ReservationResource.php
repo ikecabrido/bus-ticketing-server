@@ -19,14 +19,15 @@ class ReservationResource extends JsonResource
             'bus' => [
                 'id' => $this->bus->id,
                 'bus_number' => $this->bus->bus_number,
-                'bus_type' => $this->bus->bus_type
+                'bus_type' => $this->bus->bus_type,
+                'destinationFrom' => $this->bus->destinationFrom,
+                'destinationTo' => $this->bus->destinationTo,
+                'departure_time' => $this->bus->departure_time,
+                'departure_date' => $this->bus->departure_date,
+                'price' => $this->bus->price
             ],
-            'destinationFrom' => $this->destinationFrom,
-            'destinationTo' => $this->destinationTo,
             'reservation_date' => $this->reservation_date,
-            'departure_time' => $this->departure_time,
-            'price' => $this->price,
-            'departure_date' => $this->departure_date,
+            'quantity' => $this->quantity
         ];
     }
 }

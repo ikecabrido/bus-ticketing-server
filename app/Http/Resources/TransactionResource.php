@@ -19,7 +19,7 @@ class TransactionResource extends JsonResource
             'reservation' => [
                 'id' => $this->reservation->id,
                 'reservation_date' => $this->reservation->reservation_date,
-                'price' => $this->reservation->price
+                'bus_id' => $this->reservation->bus_id
             ],
             'ticket_number' =>$this->ticket_number,
             'transaction_date' => $this->transaction_date

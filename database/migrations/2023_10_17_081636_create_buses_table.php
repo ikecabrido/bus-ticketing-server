@@ -15,6 +15,11 @@ return new class extends Migration
             $table->id();
             $table->integer('bus_number');
             $table->enum('bus_type', ['Regular', 'Premium', 'P2P']);
+            $table->string('destinationFrom');
+            $table->string('destinationTo');
+            $table->string('departure_time');
+            $table->string('departure_date');
+            $table->integer('price');
             $table->timestamps();
         });
     }
