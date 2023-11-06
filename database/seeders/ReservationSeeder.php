@@ -17,7 +17,7 @@ class ReservationSeeder extends Seeder
      */
     public function run(): void
     {
-        Reservation::factory(24)->create();
+        Reservation::factory()->create();
         
         // $busTypes = Bus::pluck('bus_type');
         // echo $busTypes;
