@@ -21,6 +21,7 @@ use App\Http\Controllers\TransactionController;
 
 
 //public routes
+// bus schedule 
 //reservation
 Route::get('/reservations', [ReservationController::class, 'index']);
 Route::post('/reservations', [ReservationController::class, 'store']);
