@@ -26,6 +26,10 @@ class ReservationResource extends JsonResource
                 'departure_date' => $this->bus->departure_date,
                 'price' => $this->bus->price
             ],
+            'first_name' => $this->first_name,
+            'last_name' => $this->last_name,
+            'email' => $this->email,
+            'mobile_number' => $this->mobile_number,
             'reservation_date' => $this->reservation_date,
             'quantity' => $this->quantity
         ];

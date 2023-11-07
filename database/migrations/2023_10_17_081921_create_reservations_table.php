@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('bus_id');
             $table->foreign('bus_id')->references('id')->on('buses');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email');
+            $table->string('mobile_number');
             $table->date('reservation_date');
             $table->integer('quantity');
             $table->timestamps();

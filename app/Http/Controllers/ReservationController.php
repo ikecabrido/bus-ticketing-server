@@ -23,7 +23,25 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        $reservation = Reservation::create($request->all());
+        $fields = $request->validate([
+            'bus_id' => 'numeric',
+            'first_name' => 'string',
+            'last_name' => 'string',
+            'email' => 'required|string',
+            'mobile_number' => 'required|string'
+        ]);
+
+        
+        $bus = Bus::find($fields['bus_id']);
+
+
+        $reservation = Reservation::create([
+            'bus_id' => $bus->id,
+            'first_name' => $fields['first_name'],
+            'last_name' => $fields['last_name'],
+            'email' => $fields['email'],
+            'mobile_number' => $fields['mobile_number']
+        ]);
 
         if ($reservation) {
             return response([
