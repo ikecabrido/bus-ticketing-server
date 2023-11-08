@@ -127,6 +127,9 @@ class ReservationFactory extends Factory
 
         return [
             'bus_id' => fake()->unique()->randomElement(Bus::pluck('id')),
+            'first_name' => fake()->name(),
+            'last_name' => fake()->name(),
+            'email' => fake()->safeEmail(),
             // 'destinationFrom' => $destinationFrom,
             // 'destinationTo' => $destinationTo,
             'reservation_date' => now(),

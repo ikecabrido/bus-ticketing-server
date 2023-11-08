@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BusController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\TransactionController;
 
@@ -27,6 +28,7 @@ Route::get('/reservations', [ReservationController::class, 'index']);
 Route::post('/reservations', [ReservationController::class, 'store']);
 Route::get('/transactions', [TransactionController::class, 'index']);
 Route::post('/transactions', [TransactionController::class, 'store']);
+Route::get('/buses', [BusController::class, 'index']);
 
 
 
