@@ -56,16 +56,16 @@ class BusSeeder extends Seeder
         ];
 
         $date = [
-            'November-17-2023',
-            'November-18-2023',
-            'November-19-2023',
-            'November-20-2023',
-            'November-21-2023',
-            'November-22-2023',
-            'November-23-2023',
-            'November-24-2023',
-            'November-25-2023',
-            'November-26-2023',
+            '17/11/2023',
+            '18/11/2023',
+            '19/11/2023',
+            '20/11/2023',
+            '21/11/2023',
+            '22/11/2023',
+            '23/11/2023',
+            '24/11/2023',
+            '25/11/2023',
+            '26/11/2023'
         ];
 
         $busTypes = ['Regular', 'Premium', 'P2P'];

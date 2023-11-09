@@ -28,7 +28,8 @@ class ReservationController extends Controller
             'first_name' => 'string',
             'last_name' => 'string',
             'email' => 'required|string',
-            'mobile_number' => 'required|string'
+            'mobile_number' => 'required|string',
+            'quantity' => 'required'
         ]);
 
         
@@ -40,7 +41,9 @@ class ReservationController extends Controller
             'first_name' => $fields['first_name'],
             'last_name' => $fields['last_name'],
             'email' => $fields['email'],
-            'mobile_number' => $fields['mobile_number']
+            'reservation_date' => now(),
+            'mobile_number' => $fields['mobile_number'],
+            'quantity' => $fields['quantity']
         ]);
 
         if ($reservation) {
