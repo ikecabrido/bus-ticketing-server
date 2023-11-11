@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Resources\TransactionResource;
+use App\Http\Controllers\ReservationController;
 use App\Models\Reservation;
 use App\Models\Transaction;
 
@@ -24,6 +25,14 @@ class TransactionController extends Controller
     public function store(Request $request)
     {
         $transaction = Transaction::create($request->all());
+
+        // $reservation = Reservation::find($id);
+        // $transaction = Transaction::create([
+        //     'reservation_id' =>$reservation,
+        //     'ticket_number' => fake()->unique()->numberBetween(1000, 9999),
+        //     'transaction_date' => now()
+        // ]);
+
 
         if ($transaction) {
             return response([
