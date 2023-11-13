@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Seeder\BusSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,9 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
        $this->call([
-        Bus::class,
-        Transaction::class,
-        Reservation::class
+        BusSeeder::class,
        ]);
         // \App\Models\User::factory(10)->create();
 
